@@ -1,10 +1,11 @@
 import React from "react"
 
-export default () => (
-  <div>
-    <h1>This is index page.</h1>
-    <p>
-      Suck it.
-    </p>
-  </div>
-)
+export default function Home() {
+  return (
+    <div style={{ color: `purple`}}>
+      <h1>Hello Gatsby!</h1>
+      <p>I need to pee</p>
+      <img src="https://source.unsplash.com/random/400x200" alt="" />
+      </div>
+  )
+}
