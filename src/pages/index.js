@@ -1,11 +1,12 @@
-import React from "react"
+import React from "react";
+import Header from '../components/header'
+import LocationContainer from '../components/locationContainer'
 
 export default function Home() {
   return (
     <div style={{ color: `purple`}}>
-      <h1>Hello Gatsby!</h1>
-      <p>I need to pee</p>
-      <img src="https://source.unsplash.com/random/400x200" alt="" />
-      </div>
+        <Header headerText="Welcome to Truck Stop"/>
+        <LocationContainer />
+    </div>
   )
 }
