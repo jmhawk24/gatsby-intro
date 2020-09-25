@@ -6,12 +6,23 @@ const locations = [
     {id: 2, name: "away"}
 ];
 
-export default function LocationContainer() {
-    return (
-    <div>
-        {locations.map((loc) => {
-            return (<Location name={loc.name} id={loc.id}/>);
-        })}
-    </div>
-    );
+class LocationContainer extends React.Component {
+    submitAction = () => {
+        console.log("boobs");
+    }
+
+    render() {
+        return (
+            <div>
+                <form onSubmit={this.submitAction}>
+                    {locations.map((loc) => {
+                        return (<Location key={loc.id} name={loc.name} id={loc.id}/>);
+                    })}
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        );
+    }
 }
+
+export default LocationContainer;

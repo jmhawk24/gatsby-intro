@@ -1,4 +1,5 @@
 import React from 'react';
+import Checkbox from './utility/checkbox'
 
 const trucks = [
     {id: 1, name: "MCT1", location_id: 1},
@@ -8,16 +9,17 @@ const trucks = [
 
 export default function Location(props) {
     return (<div>
-        <div>
+        <h3>
             The following trucks are at {props.name}: 
-        </div>
+        </h3>
         {trucks
             .filter( (truck) => {
-                return (truck.id === props.id);
+                return (truck.location_id === props.id);
             })
             .map((truck) => {
                 return (
-                    <div>
+                    <div key={truck.id}>
+                        <Checkbox  />
                         {truck.name}
                     </div>
                     );
