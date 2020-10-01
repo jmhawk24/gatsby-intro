@@ -1,5 +1,6 @@
 import React from 'react';
 import Checkbox from './utility/checkbox'
+import Truck from './truck'
 
 const trucks = [
     {id: 1, name: "MCT1", location_id: 1},
@@ -19,8 +20,8 @@ export default function Location(props) {
             .map((truck) => {
                 return (
                     <div key={truck.id}>
-                        <Checkbox  />
-                        {truck.name}
+
+                        <Truck name={truck.name} />
                     </div>
                     );
             })
